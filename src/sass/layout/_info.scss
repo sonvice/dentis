@@ -1,0 +1,31 @@
+@use '../utils/variables'as *;
+
+.info {
+    color: $white-color;
+    background-color: $tertiary-color;
+
+    & .icon {
+        width: 30px;
+        height: 30px;
+        fill: $primary-color;
+    }
+
+    &__box-phone {
+        display: flex;
+        align-items: center;
+    }
+
+    &__phone {
+        font-size: $default-font-size;
+        font-family: inherit;
+    }
+
+    & .icon:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    &__icon-box {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
