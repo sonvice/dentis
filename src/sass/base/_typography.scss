@@ -7,3 +7,16 @@ body {
     color: $tertiary-color;
 
 }
+
+.title-primary {
+    font-size: 5rem;
+    font-weight: bolder;
+    line-height: 1.2;
+    color: $tertiary-color;
+    margin: 0;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    font-weight: 300;
+}

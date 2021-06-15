@@ -7,7 +7,7 @@
     "sass:watch": "sass --watch src/sass/index.scss:public/css/style.css",
     "devServer": "live-server ./public/",
     "pughtml": "pug --watch ./src/views/index.pug -o ./public/ --pretty",
-    "optimise-images": "imagemin src/images/  --plugin=pngquant --plugin=mozjpeg --plugin=svgo  --out-dir=public/img ",
+    "optimise-images": "imagemin src/images/  --plugin=pngquant --plugin=mozjpeg  --out-dir=public/img ",
     "compile:sass": "sass src/index.scss:public/css/style.comp.css",
     "concat:css": "concat -o public/css/style.concat.css  public/css/icon-font.css public/css/style.comp.css",
     "prefix:css": "postcss  public/css/style.concat.css -o public/css/style.prefix.css --use autoprefixer",

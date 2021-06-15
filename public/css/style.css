@@ -378,29 +378,31 @@ body {
   color: #00241b;
 }
 
-.info {
-  color: #fff;
-  background-color: #00241b;
+.title-primary {
+  font-size: 5rem;
+  font-weight: bolder;
+  line-height: 1.2;
+  color: #00241b;
+  margin: 0;
 }
-.info .icon {
-  width: 30px;
-  height: 30px;
-  fill: #91E9D3;
-}
-.info__box-phone {
-  display: flex;
-  align-items: center;
-}
-.info__phone {
+
+.paragraph {
   font-size: 1.6rem;
-  font-family: inherit;
+  font-weight: 300;
 }
-.info .icon:not(:last-child) {
-  margin-right: 1rem;
+
+.btn {
+  border: none;
+  padding: 1.6rem 3rem;
+  border-radius: 100px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
-.info__icon-box {
-  display: flex;
-  justify-content: flex-end;
+
+.btn-primary {
+  background-color: #91E9D3;
+  color: #00241b;
 }
 
 *,
@@ -897,6 +899,87 @@ body {
   .col-lg-offset-12 {
     margin-left: 100%;
   }
+}
+.header {
+  background-color: #E2F7F2;
+  padding-top: 4rem;
+}
+.header__img {
+  display: block;
+  width: 100%;
+}
+
+.info {
+  color: #fff;
+  background-color: #00241b;
+}
+.info .icon {
+  width: 30px;
+  height: 30px;
+  fill: #91E9D3;
+}
+.info__box-phone {
+  display: flex;
+  align-items: center;
+}
+.info__phone {
+  font-size: 1.6rem;
+}
+.info .icon:not(:last-child) {
+  margin-right: 1rem;
+}
+.info__icon-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation {
+  position: absolute;
+  z-index: 100;
+  top: 8rem;
+  left: 0;
+  width: 100%;
+}
+.navigation__box-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.navigation__nav {
+  flex: 0 0 100%;
+}
+.navigation__list {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  font-size: 1.6rem;
+}
+.navigation__item:hover {
+  border-bottom: 2px solid #00241b;
+}
+.navigation__item:not(:last-child) {
+  margin-right: 6rem;
+}
+.navigation__link {
+  text-decoration: none;
+  color: #00241b;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.welcome {
+  background-color: #fff;
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+.title-box > * + * {
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,8 +2,12 @@
 @use 'base/normalize';
 @use 'base/typography';
 
-@use 'layout/info';
+@use 'components/buttom';
+
 @use 'layout/grid';
+@use 'layout/header';
+@use 'layout/info';
+@use 'layout/navigation';
 
 @use 'pages/home';
 
