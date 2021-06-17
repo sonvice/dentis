@@ -11,7 +11,9 @@
     justify-content: center;
     height: 100%;
 
-    &>*+* {
-        margin-top: 2rem;
-    }
+}
+
+.title-box>*+*,
+.box-text-welcome>*+* {
+    margin-top: 2.5rem;
 }

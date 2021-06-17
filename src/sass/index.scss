@@ -3,6 +3,7 @@
 @use 'base/typography';
 
 @use 'components/buttom';
+@use 'components/welcome-img';
 
 @use 'layout/grid';
 @use 'layout/header';
@@ -13,3 +14,4 @@
 
 @use 'utils/variables';
 @use 'utils/mixins';
+@use 'utils/utils';

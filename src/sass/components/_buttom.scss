@@ -1,0 +1,36 @@
+@use '../utils/variables'as *;
+
+button:focus {
+    outline: max(1px, 0.1em) dashed currentColor;
+    outline-offset: -0.25em;
+}
+
+.btn {
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+
+.btn-primary {
+    background-color: $primary-color;
+    color: $tertiary-color;
+    border-radius: 100px;
+    box-shadow: $box-shadow;
+    padding: 1.6rem 3rem;
+}
+
+.btn-link {
+    color: $primary-color;
+    display: inline-block;
+
+    &:hover {
+        color: $tertiary-color;
+        text-shadow: $box-shadow;
+    }
+
+    &:focus {
+        outline: max(1px, 0.1em) dashed currentColor;
+        outline-offset: .3em;
+    }
+}
