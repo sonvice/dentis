@@ -386,6 +386,10 @@ body {
   margin: 0;
 }
 
+.title-service {
+  padding-bottom: 4rem;
+}
+
 .paragraph {
   font-size: 2rem;
   font-weight: 300;
@@ -421,6 +425,39 @@ button:focus {
 .btn-link:focus {
   outline: max(1px, 0.1em) dashed currentColor;
   outline-offset: 0.3em;
+}
+
+.services-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center;
+  gap: 2rem;
+}
+.services-grid__item {
+  padding: 4rem;
+  background-color: #fff;
+  border-radius: 6px;
+  width: 100%;
+  text-align: center;
+  height: 20rem;
+  transition: 0.2s ease;
+}
+.services-grid__item:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  transform: translateY(-3px);
+}
+.services-grid__icon {
+  width: 9rem;
+  height: 9rem;
+  fill: #00241b;
+}
+.services-grid li:not(:first-child) .services-grid__icon {
+  padding: 1rem;
+}
+.services-grid__description {
+  font-weight: 300;
+  font-size: 1.4rem;
 }
 
 .welcome-img {
@@ -1024,8 +1061,32 @@ button:focus {
   margin-top: 2.5rem;
 }
 
+.services {
+  background-color: #E2F7F2;
+  padding-top: 8rem;
+}
+
+.service-img {
+  position: relative;
+  bottom: -10rem;
+}
+
+.service-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .py-lg {
   padding: 8rem 0;
+}
+
+.py-md {
+  padding: 6rem 0;
+}
+
+.mt-md {
+  margin-top: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

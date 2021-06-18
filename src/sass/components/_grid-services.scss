@@ -1,0 +1,41 @@
+@use '../utils/variables'as *;
+
+.services-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    place-items: center;
+    gap: 2rem;
+
+    &__item {
+        padding: 4rem;
+        background-color: $white-color;
+        border-radius: 6px;
+        width: 100%;
+        text-align: center;
+        height: 20rem;
+        transition: .2s ease;
+
+        &:hover {
+            box-shadow: $box-shadow;
+            transform: translateY(-3px);
+        }
+
+    }
+
+    &__icon {
+        width: 9rem;
+        height: 9rem;
+        fill: $tertiary-color;
+    }
+
+    & li:not(:first-child) &__icon {
+        padding: 1rem;
+    }
+
+    &__description {
+        font-weight: 300;
+        font-size: 1.4rem;
+    }
+
+}

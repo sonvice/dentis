@@ -17,3 +17,22 @@
 .box-text-welcome>*+* {
     margin-top: 2.5rem;
 }
+
+.services {
+    background-color: $secondary-color;
+    padding-top: 8rem;
+}
+
+.service-img {
+    position: relative;
+    bottom: -10rem;
+}
+
+.service-img {
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+}
