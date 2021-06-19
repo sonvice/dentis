@@ -1,0 +1,45 @@
+@use '../utils/variables'as *;
+
+.team-grid {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+
+    }
+
+    &__item {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        transition: .3s all;
+        transform: scale(1);
+
+        &:hover {
+            transform: translateY(-8px) scale(1.05);
+        }
+
+        &>:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+
+        img {
+            display: block;
+            border-radius: 50%;
+            width: 100%;
+            box-shadow: $box-shadow;
+        }
+    }
+
+    &__name {
+        font-size: $default-font-size;
+    }
+
+    & .btn-primary {
+        padding: .5rem 2rem;
+        font-size: 1.4rem;
+    }
+
+}

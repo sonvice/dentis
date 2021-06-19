@@ -13,20 +13,34 @@
         border-radius: 6px;
         width: 100%;
         text-align: center;
-        height: 20rem;
+        height: 18rem;
         transition: .2s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
 
         &:hover {
             box-shadow: $box-shadow;
             transform: translateY(-3px);
         }
 
+
+    }
+
+    &__item:hover &__icon {
+        fill: $primary-color;
+        animation: svgColor .5s alternate;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+        // animation-direction: alternate;
     }
 
     &__icon {
         width: 9rem;
         height: 9rem;
         fill: $tertiary-color;
+
     }
 
     & li:not(:first-child) &__icon {
@@ -37,5 +51,6 @@
         font-weight: 300;
         font-size: 1.4rem;
     }
+
 
 }

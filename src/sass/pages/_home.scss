@@ -21,6 +21,10 @@
 .services {
     background-color: $secondary-color;
     padding-top: 8rem;
+
+    & .btn-primary {
+        padding: 1.2rem 4rem;
+    }
 }
 
 .service-img {
@@ -35,4 +39,8 @@
         height: auto;
     }
 
+}
+
+.team-box-title {
+    padding: 12rem 0 4rem;
 }

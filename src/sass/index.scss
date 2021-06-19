@@ -1,9 +1,11 @@
+@use 'base/animations';
 @use 'base/base';
 @use 'base/normalize';
 @use 'base/typography';
 
 @use 'components/buttom';
 @use 'components/grid-services';
+@use 'components/team-avatar';
 @use 'components/welcome-img';
 
 @use 'layout/grid';

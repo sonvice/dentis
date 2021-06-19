@@ -1,0 +1,11 @@
+@use '../utils/variables'as *;
+
+@keyframes svgColor {
+    0% {
+        fill: $tertiary-color;
+    }
+
+    100% {
+        fill: $primary-color;
+    }
+}

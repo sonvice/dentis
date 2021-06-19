@@ -5,6 +5,14 @@
 /*------------------------------------*\
 * COLUMNS
 \*------------------------------------*/
+@keyframes svgColor {
+  0% {
+    fill: #00241b;
+  }
+  100% {
+    fill: #91E9D3;
+  }
+}
 /**
 * BREAKPOINT MIXINGS
 */
@@ -401,15 +409,15 @@ button:focus {
 }
 
 .btn {
-  border: none;
-  font-size: 2rem;
+  background-color: #91E9D3;
+  color: #00241b;
   cursor: pointer;
 }
 
 .btn-primary {
-  background-color: #91E9D3;
-  color: #00241b;
+  border: none;
   border-radius: 100px;
+  font-size: 2rem;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   padding: 1.6rem 3rem;
 }
@@ -417,6 +425,8 @@ button:focus {
 .btn-link {
   color: #91E9D3;
   display: inline-block;
+  background: none;
+  font-size: 2rem;
 }
 .btn-link:hover {
   color: #00241b;
@@ -440,12 +450,21 @@ button:focus {
   border-radius: 6px;
   width: 100%;
   text-align: center;
-  height: 20rem;
+  height: 18rem;
   transition: 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 .services-grid__item:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   transform: translateY(-3px);
+}
+.services-grid__item:hover .services-grid__icon {
+  fill: #91E9D3;
+  animation: svgColor 0.5s alternate;
 }
 .services-grid__icon {
   width: 9rem;
@@ -457,6 +476,40 @@ button:focus {
 }
 .services-grid__description {
   font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.team-grid__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+}
+.team-grid__item {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  transition: 0.3s all;
+  transform: scale(1);
+}
+.team-grid__item:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+.team-grid__item > :not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.team-grid__item img {
+  display: block;
+  border-radius: 50%;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+.team-grid__name {
+  font-size: 1.6rem;
+}
+.team-grid .btn-primary {
+  padding: 0.5rem 2rem;
   font-size: 1.4rem;
 }
 
@@ -1065,6 +1118,9 @@ button:focus {
   background-color: #E2F7F2;
   padding-top: 8rem;
 }
+.services .btn-primary {
+  padding: 1.2rem 4rem;
+}
 
 .service-img {
   position: relative;
@@ -1077,6 +1133,10 @@ button:focus {
   height: auto;
 }
 
+.team-box-title {
+  padding: 12rem 0 4rem;
+}
+
 .py-lg {
   padding: 8rem 0;
 }
@@ -1087,6 +1147,14 @@ button:focus {
 
 .mt-md {
   margin-top: 4rem;
+}
+
+.mt-lg {
+  margin-top: 8rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

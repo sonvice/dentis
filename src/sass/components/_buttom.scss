@@ -6,16 +6,16 @@ button:focus {
 }
 
 .btn {
-    border: none;
-    font-size: 2rem;
+    background-color: $primary-color;
+    color: $tertiary-color;
     cursor: pointer;
 
 }
 
 .btn-primary {
-    background-color: $primary-color;
-    color: $tertiary-color;
+    border: none;
     border-radius: 100px;
+    font-size: 2rem;
     box-shadow: $box-shadow;
     padding: 1.6rem 3rem;
 }
@@ -23,6 +23,8 @@ button:focus {
 .btn-link {
     color: $primary-color;
     display: inline-block;
+    background: none;
+    font-size: 2rem;
 
     &:hover {
         color: $tertiary-color;
