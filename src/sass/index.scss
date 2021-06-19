@@ -5,6 +5,7 @@
 
 @use 'components/buttom';
 @use 'components/grid-services';
+@use 'components/swiper-testimonial';
 @use 'components/team-avatar';
 @use 'components/welcome-img';
 
@@ -18,3 +19,5 @@
 @use 'utils/variables';
 @use 'utils/mixins';
 @use 'utils/utils';
+
+@use 'vendors/swiper-bundle';

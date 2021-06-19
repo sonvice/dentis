@@ -14,7 +14,7 @@
     "compress:css": "node-sass --output-style compressed public/css/style.prefix.css  public/css/style.css",
     "build": "npm-run-all compile:sass concat:css prefix:css compress:css",
     "babel-w": "babel-watch ./src/js/script.js -o ./public/js/script.js",
-    "babel-compile": "babel ./src/js/script.js --watch -o ./public/js/script.js",
+    "babel-compile": "babel ./src/js/*.js --watch -o ./public/js/script.js",
     "start": "npm-run-all --parallel devServer sass:watch pughtml babel-compile"
   },
   "keywords": [
