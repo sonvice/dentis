@@ -13,11 +13,6 @@
 
 }
 
-.title-box>*+*,
-.box-text-welcome>*+* {
-    margin-top: 2.5rem;
-}
-
 .services {
     background-color: $secondary-color;
     padding-top: 8rem;
@@ -41,8 +36,12 @@
 
 }
 
+.team {
+    margin-bottom: 8rem;
+}
+
 .team-box-title {
-    padding: 12rem 0 4rem;
+    padding: 8rem 0 2.5rem;
 }
 
 .testimonial {
@@ -50,5 +49,6 @@
 }
 
 .testimonial-box {
-    // height: 28vh;
+    margin-top: 1rem;
+    position: relative;
 }

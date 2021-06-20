@@ -394,10 +394,6 @@ body {
   margin: 0;
 }
 
-.title-service {
-  padding-bottom: 4rem;
-}
-
 .paragraph {
   font-size: 2rem;
   font-weight: 300;
@@ -487,6 +483,7 @@ button:focus {
   background-color: #fff;
   padding: 4rem;
   position: relative;
+  font-size: 1.6rem;
 }
 .swiper-container .paragraph::after {
   content: "";
@@ -495,7 +492,8 @@ button:focus {
   background-color: inherit;
   position: absolute;
   bottom: -10px;
-  transform: translate(150%, 20%) rotate(45deg);
+  left: 50%;
+  transform: translate(-50%, 20%) rotate(45deg);
 }
 
 .swiper-slide {
@@ -550,6 +548,13 @@ button:focus {
   border-radius: 50%;
   margin-right: 2rem;
 }
+.testimonial-box__name {
+  font-size: 1.6rem;
+}
+.testimonial-box__via {
+  font-size: 1.2rem;
+}
+
 .team-grid__list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
@@ -1181,11 +1186,6 @@ button:focus {
   height: 100%;
 }
 
-.title-box > * + *,
-.box-text-welcome > * + * {
-  margin-top: 2.5rem;
-}
-
 .services {
   background-color: #E2F7F2;
   padding-top: 8rem;
@@ -1205,12 +1205,21 @@ button:focus {
   height: auto;
 }
 
+.team {
+  margin-bottom: 8rem;
+}
+
 .team-box-title {
-  padding: 12rem 0 4rem;
+  padding: 8rem 0 2.5rem;
 }
 
 .testimonial {
   background-color: #E2F7F2;
+}
+
+.testimonial-box {
+  margin-top: 1rem;
+  position: relative;
 }
 
 .py-lg {
@@ -1229,8 +1238,16 @@ button:focus {
   margin-top: 8rem;
 }
 
+.mt-sm {
+  margin-top: 2.5rem;
+}
+
 .text-center {
   text-align: center;
+}
+
+.flow > * + * {
+  margin-top: 2.5rem;
 }
 
 /**
@@ -1277,7 +1294,6 @@ button:focus {
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
-  padding-bottom: 4rem;
 }
 
 .swiper-container-android .swiper-slide,
@@ -1409,7 +1425,7 @@ button:focus {
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 50%;
+  top: 28%;
   width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
@@ -1441,7 +1457,7 @@ button:focus {
 
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-  left: 10px;
+  left: -45px;
   right: auto;
 }
 
@@ -1452,7 +1468,7 @@ button:focus {
 
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-  right: 10px;
+  right: -45px;
   left: auto;
 }
 
