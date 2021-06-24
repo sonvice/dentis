@@ -9,6 +9,12 @@ button:focus {
     background-color: $primary-color;
     color: $tertiary-color;
     cursor: pointer;
+    transform: scale(1);
+    transition: all .2s;
+
+    &:hover {
+        transform: scale(0.96);
+    }
 
 }
 
@@ -18,6 +24,20 @@ button:focus {
     font-size: 2rem;
     box-shadow: $box-shadow;
     padding: 1.6rem 3rem;
+
+
+}
+
+.btn-secondary {
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    font-size: $default-font-size;
+    text-decoration: none;
+
+    & .icon {
+        margin-right: 1rem;
+    }
 }
 
 .btn-link {
