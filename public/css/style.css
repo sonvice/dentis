@@ -13,6 +13,37 @@
     fill: #91E9D3;
   }
 }
+@keyframes socialHeader {
+  0% {
+    fill: #91E9D3;
+  }
+  100% {
+    fill: currentColor;
+  }
+}
+@keyframes lrAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes btAnimation {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 /**
 * BREAKPOINT MIXINGS
 */
@@ -500,6 +531,7 @@ button:focus {
   padding: 4rem;
   position: relative;
   font-size: 1.6rem;
+  height: 20rem;
 }
 .swiper-container .paragraph::after {
   content: "";
@@ -683,6 +715,32 @@ button:focus {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.footer-info__bg-ico:hover {
+  transform: scale(0.96);
+}
+.footer-info__bg-ico:hover .icon {
+  z-index: 1;
+  fill: currentColor;
+}
+.footer-info__bg-ico:hover::after {
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+.footer-info__bg-ico::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 89%;
+  height: 89%;
+  background-color: #00241b;
+  transform: scale(0);
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 .footer-info__social {
   display: flex;
@@ -701,6 +759,7 @@ button:focus {
   fill: currentColor;
   width: 1.6rem;
   height: 1.6rem;
+  opacity: 0.7;
 }
 .footer-info__list .paragraph {
   font-size: 1.4rem;
@@ -737,6 +796,17 @@ button:focus {
   position: relative;
   display: flex;
   align-items: center;
+  background-image: linear-gradient(transparent calc(100% - 2px), currentColor 2px);
+  background-repeat: no-repeat;
+  width: max-content;
+  transition: background-size 0.2s;
+  background-size: 0% 100%;
+}
+.footer-info__item-link:hover {
+  background-size: 100% 100%;
+}
+.footer-info__item-link:hover .icon {
+  opacity: 1;
 }
 .footer-info__item-link a {
   color: inherit;
@@ -744,6 +814,10 @@ button:focus {
   font-weight: 300;
   margin-left: 6px;
   font-weight: 300;
+  opacity: 0.7;
+}
+.footer-info__item-link a:hover {
+  opacity: 1;
 }
 
 .footer-item {
@@ -768,6 +842,7 @@ button:focus {
   position: relative;
   display: inline-block;
   margin-right: 8px;
+  cursor: pointer;
 }
 .form__radio::after {
   content: "";
@@ -1282,6 +1357,7 @@ button:focus {
 }
 .header {
   background-color: #E2F7F2;
+  margin-top: -8rem;
   padding-top: 4rem;
 }
 .header__img {
@@ -1295,6 +1371,11 @@ button:focus {
 }
 .info .icon {
   fill: #91E9D3;
+  cursor: pointer;
+}
+.info .icon:hover {
+  animation: socialHeader 0.5s;
+  animation-fill-mode: forwards;
 }
 .info__box-phone {
   display: flex;
@@ -1312,11 +1393,13 @@ button:focus {
 }
 
 .navigation {
-  position: absolute;
+  position: sticky;
   z-index: 100;
-  top: 8rem;
+  top: 0;
   left: 0;
   width: 100%;
+  transition: 0.3s all;
+  padding-top: 2rem;
 }
 .navigation__box-logo {
   display: flex;
@@ -1331,9 +1414,6 @@ button:focus {
   list-style: none;
   justify-content: flex-end;
   font-size: 1.6rem;
-}
-.navigation__item:hover {
-  border-bottom: 2px solid #00241b;
 }
 .navigation__item:not(:last-child) {
   margin-right: 6rem;
@@ -1424,6 +1504,47 @@ button:focus {
 .icon {
   width: 30px;
   height: 30px;
+}
+
+.bb-animate {
+  background-image: linear-gradient(transparent calc(100% - 2px), currentColor 2px);
+  background-repeat: no-repeat;
+  width: max-content;
+  transition: background-size 0.2s;
+  background-size: 0% 100%;
+}
+.bb-animate:hover {
+  background-size: 100% 100%;
+}
+
+.lr-animation {
+  animation: lrAnimation 1.2s cubic-bezier(0.75, 0.25, 0.1, 0.95);
+}
+
+.lr-animation-paragraph {
+  animation: lrAnimation 1.2s cubic-bezier(0.75, 0.25, 0.1, 0.95) 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.bt-animation {
+  animation: btAnimation 0.5s ease-out 1.5s;
+  animation-fill-mode: backwards;
+}
+
+.bt-animation2 {
+  animation: btAnimation 0.5s ease-out 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.sticky-nav {
+  background-color: #91E9D3;
+  top: -4px;
+  padding: 1rem 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.spaceB {
+  justify-content: space-between;
 }
 
 /**

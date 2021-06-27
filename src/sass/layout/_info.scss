@@ -6,6 +6,12 @@
 
     & .icon {
         fill: $primary-color;
+        cursor: pointer;
+
+        &:hover {
+            animation: socialHeader .5s;
+            animation-fill-mode: forwards;
+        }
     }
 
     &__box-phone {

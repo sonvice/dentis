@@ -1,3 +1,5 @@
+@use '../utils/variables'as*;
+
 .py-lg {
     padding: 8rem 0;
 }
@@ -29,4 +31,46 @@
 .icon {
     width: 30px;
     height: 30px;
+}
+
+.bb-animate {
+    background-image: linear-gradient(transparent calc(100% - 2px), currentColor 2px);
+    background-repeat: no-repeat;
+    width: max-content;
+    transition: background-size .2s;
+    background-size: 0% 100%;
+
+    &:hover {
+        background-size: 100% 100%;
+    }
+}
+
+.lr-animation {
+    animation: lrAnimation 1.2s cubic-bezier(0.75, 0.25, 0.10, 0.95);
+}
+
+.lr-animation-paragraph {
+    animation: lrAnimation 1.2s cubic-bezier(0.75, 0.25, 0.10, 0.95) 0.5s;
+    animation-fill-mode: backwards; //La animación aplicará los valores definidos en el primer keyframe tan pronto como se aplique al objeto
+}
+
+.bt-animation {
+    animation: btAnimation .5s ease-out 1.5s;
+    animation-fill-mode: backwards;
+}
+
+.bt-animation2 {
+    animation: btAnimation .5s ease-out .5s;
+    animation-fill-mode: backwards;
+}
+
+.sticky-nav {
+    background-color: $primary-color;
+    top: -4px;
+    padding: 1rem 0;
+    box-shadow: $box-shadow;
+}
+
+.spaceB {
+    justify-content: space-between;
 }
