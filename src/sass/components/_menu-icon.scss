@@ -1,0 +1,52 @@
+@use '../utils/mixins'as *;
+@use '../utils/variables'as *;
+
+.menu_icon {
+    width: 5.5rem;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    display: none;
+
+    @include sm {
+        display: block;
+    }
+}
+
+.menu_icon span {
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 5rem;
+    background-color: $tertiary-color;
+    transform: rotate(0);
+    transition: all 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+span.one {
+    top: 0px;
+}
+
+span.two {
+    top: 1.5rem;
+}
+
+span.three {
+    top: 3rem;
+}
+
+.clicked .one {
+    transform: translateY(15px) rotate(45deg);
+}
+
+.clicked .two {
+    opacity: 0;
+}
+
+.clicked .three {
+    transform: translateY(-15px) rotate(-45deg);
+}

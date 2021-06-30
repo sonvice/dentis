@@ -57,14 +57,14 @@
 
 @media (prefers-reduced-motion: no-preference) {
   html {
-    font-size: 62.5%;
+    font-size: 74%;
     /* Se dividio 10/16, 10 el tamaño de fuente que queremos para toda la página, y 16 el tamaño de fuente por defecto, en porcentaje para mejorar 
     la experiencia del usuario cuando quiera agrandar el tamaño de la fuente(todas las medidas que esten en rem cambian) de la página */
   }
 }
-@media (prefers-reduced-motion: no-preference) and (min-width: 75em) {
+@media (prefers-reduced-motion: no-preference) and (max-width: 75em) {
   html {
-    font-size: 74%;
+    font-size: 62.5%;
   }
 }
 body {
@@ -424,6 +424,11 @@ body {
   color: #00241b;
   margin: 0;
 }
+@media (max-width: 62em) {
+  .title-primary {
+    font-size: 4rem;
+  }
+}
 
 .paragraph {
   font-size: 2rem;
@@ -520,6 +525,57 @@ button:focus {
 .services-grid__description {
   font-weight: 300;
   font-size: 1.4rem;
+}
+
+.menu_icon {
+  width: 5.5rem;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  display: none;
+}
+@media (max-width: 48em) {
+  .menu_icon {
+    display: block;
+  }
+}
+
+.menu_icon span {
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 5rem;
+  background-color: #00241b;
+  transform: rotate(0);
+  transition: all 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+span.one {
+  top: 0px;
+}
+
+span.two {
+  top: 1.5rem;
+}
+
+span.three {
+  top: 3rem;
+}
+
+.clicked .one {
+  transform: translateY(15px) rotate(45deg);
+}
+
+.clicked .two {
+  opacity: 0;
+}
+
+.clicked .three {
+  transform: translateY(-15px) rotate(-45deg);
 }
 
 .swiper-container {
@@ -1046,7 +1102,7 @@ button:focus {
 /**
 * SMALL (SM), MEDIUM (MD), LARGE (LG)
 */
-@media (min-width: 48em) {
+@media (max-width: 48em) {
   /*------------------------------------*\
   # COLUMNS
   \*------------------------------------*/
@@ -1149,7 +1205,7 @@ button:focus {
     margin-left: 100%;
   }
 }
-@media (min-width: 62em) {
+@media (max-width: 62em) {
   /*------------------------------------*\
   # COLUMNS
   \*------------------------------------*/
@@ -1252,7 +1308,7 @@ button:focus {
     margin-left: 100%;
   }
 }
-@media (min-width: 75em) {
+@media (max-width: 75em) {
   /*------------------------------------*\
   # COLUMNS
   \*------------------------------------*/
@@ -1360,6 +1416,22 @@ button:focus {
   margin-top: -8rem;
   padding-top: 4rem;
 }
+@media (max-width: 62em) {
+  .header {
+    padding-top: 8rem;
+  }
+}
+@media (max-width: 48em) {
+  .header {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+@media (max-width: 48em) {
+  .header__content-img {
+    display: none;
+  }
+}
 .header__img {
   display: block;
   width: 100%;
@@ -1368,6 +1440,8 @@ button:focus {
 .info {
   color: #fff;
   background-color: #00241b;
+  position: relative;
+  z-index: 10;
 }
 .info .icon {
   fill: #91E9D3;
@@ -1399,24 +1473,69 @@ button:focus {
   left: 0;
   width: 100%;
   transition: 0.3s all;
-  padding-top: 2rem;
+}
+@media (max-width: 62em) {
+  .navigation {
+    background: #E2F7F2;
+  }
+}
+@media (max-width: 48em) {
+  .navigation {
+    background: #91E9D3;
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 62em) {
+  .navigation__box {
+    justify-content: space-between;
+  }
 }
 .navigation__box-logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
+@media (max-width: 48em) {
+  .navigation__box-logo {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (max-width: 48em) {
+  .navigation__padding {
+    padding: 0;
+  }
+}
 .navigation__nav {
   flex: 0 0 100%;
+  transition: 0.3s all;
+}
+@media (max-width: 48em) {
+  .navigation__nav {
+    padding: 0;
+    height: 0px;
+    overflow: hidden;
+  }
 }
 .navigation__list {
   display: flex;
   list-style: none;
   justify-content: flex-end;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+}
+@media (max-width: 48em) {
+  .navigation__list {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
 }
 .navigation__item:not(:last-child) {
   margin-right: 6rem;
+}
+@media (max-width: 48em) {
+  .navigation__item {
+    padding-top: 1rem;
+  }
 }
 .navigation__link {
   text-decoration: none;
@@ -1501,6 +1620,16 @@ button:focus {
   margin-top: 2.5rem;
 }
 
+@media (max-width: 48em) {
+  .title-box {
+    padding: 8rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .icon {
   width: 30px;
   height: 30px;
@@ -1542,9 +1671,27 @@ button:focus {
   padding: 1rem 0;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
+@media (max-width: 48em) {
+  .sticky-nav {
+    padding: 0;
+  }
+}
 
 .spaceB {
   justify-content: space-between;
+}
+
+@media (max-width: 48em) {
+  .active-nav {
+    height: 20rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .border-bottom {
+    border-bottom: 2px solid #00241b;
+  }
 }
 
 /**

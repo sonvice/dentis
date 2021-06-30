@@ -1,3 +1,4 @@
+@use '../utils/mixins'as *;
 @use '../utils/variables'as *;
 
 .navigation {
@@ -7,28 +8,75 @@
     left: 0;
     width: 100%;
     transition: .3s all;
-    padding-top: 2rem;
+
+    @include md {
+        background: $secondary-color;
+    }
+
+    @include sm {
+        background: $primary-color;
+        padding: 1rem 0;
+    }
+
+    &__box {
+        @include md {
+            justify-content: space-between;
+
+        }
+    }
 
     &__box-logo {
         display: flex;
         justify-content: flex-start;
         align-items: center;
+
+        @include sm {
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__padding {
+        @include sm {
+            padding: 0;
+        }
     }
 
     &__nav {
         flex: 0 0 100%;
+        transition: .3s all;
+
+        @include sm {
+            // padding-bottom: 3rem;
+            padding: 0;
+            height: 0px;
+            overflow: hidden;
+
+        }
     }
 
     &__list {
         display: flex;
         list-style: none;
         justify-content: flex-end;
-        font-size: $default-font-size;
+        font-size: 1.8rem;
+
+        @include sm {
+            flex-direction: column;
+            padding: 1.5rem;
+        }
     }
 
     &__item:not(:last-child) {
         margin-right: 6rem;
     }
+
+    &__item {
+        @include sm {
+            padding-top: 1rem;
+        }
+    }
+
 
     &__link {
         text-decoration: none;

@@ -100,3 +100,19 @@ window.addEventListener('scroll', (e)=>{
         navRow.classList.remove('spaceB')
     }
 })
+
+//Menu icon
+let icon = document.querySelector(".menu_icon");
+
+icon.addEventListener("click", () => {
+  icon.classList.toggle("clicked");
+});
+
+//Selected btn nav
+const menuIcon= document.querySelector('.menu_icon')
+const lisMenu = document.querySelector('.navigation__nav')
+const boxMenu = document.querySelector('.navigation')
+menuIcon.addEventListener('click', ()=>{
+    lisMenu.classList.toggle('active-nav')
+    boxMenu.classList.toggle('border-bottom')
+})

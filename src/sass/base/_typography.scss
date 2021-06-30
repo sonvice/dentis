@@ -1,4 +1,5 @@
 @use '../utils/variables'as *;
+@use '../utils/mixins'as *;
 
 body {
     font-family: 'Ubuntu', sans-serif;
@@ -14,6 +15,10 @@ body {
     line-height: 1.2;
     color: $tertiary-color;
     margin: 0;
+
+    @include md {
+        font-size: 4rem;
+    }
 }
 
 .paragraph {

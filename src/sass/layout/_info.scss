@@ -3,6 +3,8 @@
 .info {
     color: $white-color;
     background-color: $tertiary-color;
+    position: relative;
+    z-index: 10;
 
     & .icon {
         fill: $primary-color;

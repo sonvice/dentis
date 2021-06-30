@@ -1,9 +1,25 @@
+@use '../utils/mixins'as *;
 @use '../utils/variables'as *;
 
 .header {
     background-color: $secondary-color;
     margin-top: -8rem;
     padding-top: 4rem;
+
+    @include md {
+        padding-top: 8rem;
+    }
+
+    @include sm {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    &__content-img {
+        @include sm {
+            display: none;
+        }
+    }
 
     &__img {
         display: block;
