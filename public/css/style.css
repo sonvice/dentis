@@ -440,6 +440,13 @@ body {
   font-weight: 300;
 }
 
+@media (max-width: 48em) {
+  .box-text-welcome,
+.service-text {
+    text-align: center;
+  }
+}
+
 button:focus {
   outline: max(1px, 0.1em) dashed currentColor;
   outline-offset: -0.25em;
@@ -759,6 +766,11 @@ span.three {
   display: flex;
   align-items: center;
 }
+@media (max-width: 62em) {
+  .footer-info__call {
+    margin-left: 2rem;
+  }
+}
 .footer-info__img {
   border-radius: 50%;
   width: 8rem;
@@ -795,7 +807,7 @@ span.three {
 }
 .footer-info__bg-ico {
   background: #91E9D3;
-  padding: 0 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -830,6 +842,18 @@ span.three {
 .footer-info__social {
   display: flex;
   justify-content: flex-end;
+}
+@media (max-width: 62em) {
+  .footer-info__social {
+    justify-content: initial;
+    height: 10rem;
+    align-items: center;
+  }
+}
+@media (max-width: 37.5em) {
+  .footer-info__social {
+    flex-wrap: wrap;
+  }
 }
 .footer-info__social > * {
   border-radius: 6px;
@@ -1505,6 +1529,10 @@ span.three {
   .header {
     margin-top: 0;
     padding-top: 0;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (max-width: 48em) {
