@@ -4872,12 +4872,16 @@ var swiper = new Swiper(".mySwiper", {
     960: {
       slidesPerView: 3,
       spaceBetween: 30
+    },
+    1040: {
+      slidesPerView: 3,
+      spaceBetween: 30
     }
-  } // pagination: {
-  // el: ".swiper-pagination",
-  // clickable: true,
-  // },
-
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  }
 }); //Intersection Observer
 
 const textSecction = document.querySelectorAll(".observer");
@@ -4938,10 +4942,10 @@ window.addEventListener('scroll', e => {
   // console.log(window.scrollY)
   if (window.scrollY > 150) {
     nav.classList.add('sticky-nav');
-    navRow.classList.add('spaceB');
+    navRow.classList.add('space');
   } else {
     nav.classList.remove('sticky-nav');
-    navRow.classList.remove('spaceB');
+    navRow.classList.remove('space');
   }
 }); //Menu icon
 

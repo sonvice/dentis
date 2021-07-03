@@ -1,3 +1,4 @@
+@use '../utils/mixins'as *;
 @use '../utils/variables'as *;
 
 .welcome {
@@ -25,9 +26,20 @@
 .service-img {
     position: relative;
     bottom: -10rem;
+
+    @include sm {
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 8rem;
+    }
 }
 
 .service-img {
+
+    @include md {
+        bottom: 0;
+    }
+
     img {
         display: block;
         width: 100%;
@@ -51,4 +63,23 @@
 .testimonial-box {
     margin-top: 1rem;
     position: relative;
+}
+
+.btn.buttom-grid {
+    @include md {
+
+        margin-bottom: calc(6rem - 1.5rem);
+        margin-top: 6rem;
+    }
+
+    @include respond(tab) {
+        margin-bottom: 4rem;
+    }
+
+    @include respond(phone) {
+        margin: 6rem auto;
+        display: block;
+        width: 100%;
+        padding: 2rem 0;
+    }
 }

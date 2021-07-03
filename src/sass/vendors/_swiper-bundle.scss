@@ -9,6 +9,7 @@
  *
  * Released on: May 31, 2021
  */
+@use '../utils/mixins'as *;
 @use '../utils/variables'as *;
 
 @font-face {
@@ -186,6 +187,10 @@
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
+
+  @include lg {
+    display: none;
+  }
 }
 
 .swiper-button-prev.swiper-button-disabled,
@@ -208,7 +213,7 @@
 
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-  left: -45px;
+  left: 0px;
   right: auto;
 }
 
@@ -219,7 +224,7 @@
 
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-  right: -45px;
+  right: 0px;
   left: auto;
 }
 
@@ -254,6 +259,13 @@
   transition: 300ms opacity;
   transform: translate3d(0, 0, 0);
   z-index: 10;
+  display: none;
+
+  @include lg {
+    display: block;
+    width: 100%;
+    margin-top: 4rem;
+  }
 }
 
 .swiper-pagination.swiper-pagination-hidden {
@@ -305,12 +317,13 @@
 }
 
 .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   display: inline-block;
   border-radius: 50%;
   background: #000;
   opacity: 0.2;
+  margin: .5rem;
 }
 
 button.swiper-pagination-bullet {

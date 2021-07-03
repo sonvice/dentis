@@ -1,3 +1,4 @@
+@use '../utils/mixins'as *;
 @use '../utils/variables'as *;
 
 .team-grid {
@@ -5,6 +6,9 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
 
+        @include sm {
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        }
     }
 
     &__item {

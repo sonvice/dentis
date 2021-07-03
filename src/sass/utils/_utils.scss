@@ -86,7 +86,7 @@
     }
 }
 
-.spaceB {
+.space {
     justify-content: space-between;
 }
 
@@ -100,5 +100,23 @@
 .border-bottom {
     @include sm {
         border-bottom: 2px solid $tertiary-color;
+    }
+}
+
+.services-img-box {
+
+    @include md {
+        display: flex;
+    }
+
+    @include sm {
+        flex-wrap: wrap;
+    }
+}
+
+.offset-0 {
+    @include sm {
+
+        margin-left: 0;
     }
 }

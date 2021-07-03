@@ -19,6 +19,10 @@
             font-size: 62.5%;
         }
 
+        @include sm {
+            font-size: 58.5%;
+        }
+
     }
 }
 

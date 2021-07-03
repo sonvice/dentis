@@ -19,15 +19,16 @@
 
         ; //900px
     }
-}
 
+    @if $breakpoint==tab {
+        @media (max-width: 75em) {
+            @content
+        }
 
-
-@mixin xs {
-    @media (min-width: #{$screen-xs-max}) {
-        @content;
+        ; //1200px
     }
 }
+
 
 @mixin sm {
     @media (max-width: #{$screen-sm-min}) {
@@ -46,6 +47,15 @@
         @content;
     }
 }
+
+@mixin xs {
+    @media (min-width: #{$screen-xs-max}) {
+        @content;
+    }
+}
+
+
+
 
 
 @mixin gridGenerator($breakpoint, $offset: false) {
@@ -70,4 +80,7 @@
             }
         }
     }
+
+
+
 }

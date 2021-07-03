@@ -1,5 +1,15 @@
+@use '../utils/mixins'as *;
+@use '../utils/variables'as *;
+
+.welcome__box-img {
+    @include sm {
+        margin: 0 auto;
+    }
+}
+
 .welcome-img {
     position: relative;
+
 
     &::after {
         content: "";
@@ -11,13 +21,18 @@
         z-index: 0;
         left: -1rem;
         right: 0;
-        top: 10rem;
+        top: 16rem;
         background-repeat: no-repeat;
         background-size: 100%;
+
+        @include md {
+            top: 12rem;
+        }
     }
 
     &__radius {
         position: relative;
         z-index: 10;
+        width: 100%;
     }
 }
