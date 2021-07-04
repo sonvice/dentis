@@ -57,7 +57,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   html {
-    font-size: 74%;
+    font-size: 75%;
     /* Se dividio 10/16, 10 el tamaño de fuente que queremos para toda la página, y 16 el tamaño de fuente por defecto, en porcentaje para mejorar 
     la experiencia del usuario cuando quiera agrandar el tamaño de la fuente(todas las medidas que esten en rem cambian) de la página */
   }
@@ -74,6 +74,11 @@
 }
 body {
   box-sizing: border-box;
+}
+
+::selection {
+  background-color: #00241b;
+  color: #E2F7F2;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -500,9 +505,14 @@ button:focus {
 .services-grid {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   place-items: center;
   gap: 2rem;
+}
+@media (max-width: 62em) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
+  }
 }
 .services-grid__item {
   padding: 4rem;
@@ -579,7 +589,7 @@ span.three {
 }
 
 .clicked .one {
-  transform: translateY(15px) rotate(45deg);
+  transform: translateY(1.5rem) rotate(45deg);
 }
 
 .clicked .two {
@@ -587,12 +597,17 @@ span.three {
 }
 
 .clicked .three {
-  transform: translateY(-15px) rotate(-45deg);
+  transform: translateY(-1.6rem) rotate(-45deg);
 }
 
 .swiper-container {
-  width: 100%;
+  width: 90%;
   height: 100%;
+}
+@media (max-width: 62em) {
+  .swiper-container {
+    width: 100%;
+  }
 }
 .swiper-container .paragraph {
   background-color: #fff;
@@ -727,29 +742,11 @@ span.three {
 .welcome-img {
   position: relative;
 }
-.welcome-img::after {
-  content: "";
-  background-image: url(../img/blob.svg);
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  z-index: 0;
-  left: -1rem;
-  right: 0;
-  top: 16rem;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-@media (max-width: 62em) {
-  .welcome-img::after {
-    top: 12rem;
-  }
-}
 .welcome-img__radius {
   position: relative;
   z-index: 10;
   width: 100%;
+  filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 2px 8px);
 }
 
 .footer {
@@ -1654,6 +1651,13 @@ span.three {
 
 .welcome {
   background-color: #fff;
+  background: url(../img/tooth-bg.svg) 130% 100%/60% no-repeat;
+  background-repeat: no-repeat;
+}
+@media (max-width: 48em) {
+  .welcome {
+    background: url(../img/tooth-bg.svg) 130% 100%/100% no-repeat;
+  }
 }
 
 .title-box {
@@ -1693,6 +1697,17 @@ span.three {
   display: block;
   width: 100%;
   height: auto;
+}
+
+@media (max-width: 62em) {
+  .services-img-box {
+    display: flex;
+  }
+}
+@media (max-width: 48em) {
+  .services-img-box {
+    flex-wrap: wrap;
+  }
 }
 
 .team {
@@ -1831,17 +1846,6 @@ span.three {
 @media (max-width: 48em) {
   .border-bottom {
     border-bottom: 2px solid #00241b;
-  }
-}
-
-@media (max-width: 62em) {
-  .services-img-box {
-    display: flex;
-  }
-}
-@media (max-width: 48em) {
-  .services-img-box {
-    flex-wrap: wrap;
   }
 }
 

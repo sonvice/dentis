@@ -11,28 +11,10 @@
     position: relative;
 
 
-    &::after {
-        content: "";
-        background-image: url(../img/blob.svg);
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        z-index: 0;
-        left: -1rem;
-        right: 0;
-        top: 16rem;
-        background-repeat: no-repeat;
-        background-size: 100%;
-
-        @include md {
-            top: 12rem;
-        }
-    }
-
     &__radius {
         position: relative;
         z-index: 10;
         width: 100%;
+        filter: drop-shadow($box-shadow-active);
     }
 }

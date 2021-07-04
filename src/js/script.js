@@ -12,7 +12,7 @@ var swiper = new Swiper(".mySwiper", {
         },
         breakpoints: {
             // when window width is >= 320px
-            320: {
+            200: {
             slidesPerView: 1,
             spaceBetween: 10
             },
@@ -36,7 +36,13 @@ var swiper = new Swiper(".mySwiper", {
         el: ".swiper-pagination",
         clickable: true,
         },
-});
+})
+console.log(  swiper.previousIndex);
+;
+swiper.on('setTransition', function (e) {
+   
+  });
+
 
 //Intersection Observer
 const textSecction = document.querySelectorAll(".observer")

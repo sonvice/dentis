@@ -2,8 +2,12 @@
 @use '../utils/variables'as *;
 
 .swiper-container {
-    width: 100%;
+    width: 90%;
     height: 100%;
+
+    @include md {
+        width: 100%;
+    }
 
     & .paragraph {
         background-color: $white-color;

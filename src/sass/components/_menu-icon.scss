@@ -40,7 +40,7 @@ span.three {
 }
 
 .clicked .one {
-    transform: translateY(15px) rotate(45deg);
+    transform: translateY(1.5rem) rotate(45deg);
 }
 
 .clicked .two {
@@ -48,5 +48,5 @@ span.three {
 }
 
 .clicked .three {
-    transform: translateY(-15px) rotate(-45deg);
+    transform: translateY(-1.6rem) rotate(-45deg);
 }

@@ -11,12 +11,12 @@
 
 @media (prefers-reduced-motion: no-preference) {
     html {
-        font-size: 74%; //1rem =10px  10px/16px = 62.5%
+        font-size: 75%; //1rem =10px  10px/16px = 62.5%
         /* Se dividio 10/16, 10 el tamaño de fuente que queremos para toda la página, y 16 el tamaño de fuente por defecto, en porcentaje para mejorar 
     la experiencia del usuario cuando quiera agrandar el tamaño de la fuente(todas las medidas que esten en rem cambian) de la página */
 
         @include lg {
-            font-size: 62.5%;
+            font-size: 62.5%; //1rem =10px  10px/16px = 62.5%
         }
 
         @include sm {
@@ -28,4 +28,9 @@
 
 body {
     box-sizing: border-box;
+}
+
+::selection {
+    background-color: $tertiary-color;
+    color: $secondary-color;
 }

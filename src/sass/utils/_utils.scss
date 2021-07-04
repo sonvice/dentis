@@ -103,16 +103,7 @@
     }
 }
 
-.services-img-box {
 
-    @include md {
-        display: flex;
-    }
-
-    @include sm {
-        flex-wrap: wrap;
-    }
-}
 
 .offset-0 {
     @include sm {

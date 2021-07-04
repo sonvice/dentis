@@ -9,5 +9,6 @@ header.header
                         | elit, sed diam nonummy nibh euis
                     button.btn.btn-primary.bt-animation Free consultation
             .col-6.no-gutter.header__content-img 
-                .header__box-img 
-                    img(src="img/portada-medica.png", alt="Doctora").header__img
+                picture.header__box-img 
+                    source.header__img(srcset="img/portada-medica@2x.png" media="(min-width: 992px)")
+                    img.header__img(src="img/portada-medica.png", alt="Doctora")
