@@ -17,6 +17,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-image: url(../img/portada-medica.svg);
+        background-size: 90%;
+        background-repeat: no-repeat;
+        background-position: center center;
     }
 
     &__content-img {
@@ -28,6 +32,13 @@
     &__img {
         display: block;
         width: 100%;
+    }
+
+    .btn {
+        @include sm {
+
+            background-color: $secondary-color;
+        }
     }
 
 }

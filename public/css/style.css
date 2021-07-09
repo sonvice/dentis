@@ -60,6 +60,8 @@
     font-size: 75%;
     /* Se dividio 10/16, 10 el tamaño de fuente que queremos para toda la página, y 16 el tamaño de fuente por defecto, en porcentaje para mejorar 
     la experiencia del usuario cuando quiera agrandar el tamaño de la fuente(todas las medidas que esten en rem cambian) de la página */
+    scroll-behavior: smooth;
+    overflow-y: scroll;
   }
 }
 @media (prefers-reduced-motion: no-preference) and (max-width: 75em) {
@@ -452,9 +454,10 @@ body {
   }
 }
 
-button:focus {
+button:focus,
+.btn:focus {
   outline: max(1px, 0.1em) dashed currentColor;
-  outline-offset: -0.25em;
+  outline-offset: 0.15em;
 }
 
 .btn {
@@ -600,6 +603,71 @@ span.three {
   transform: translateY(-1.6rem) rotate(-45deg);
 }
 
+.popup {
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 36, 27, 0.3);
+  -webkit-backdrop-filter: blur(1rem);
+  height: 100vh;
+  left: 0;
+  top: 0;
+  color: #E2F7F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.popup .row {
+  justify-content: center;
+  align-items: center;
+}
+.popup__content {
+  display: flex;
+  background-color: #00241b;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: all 0.3s 0.2s;
+}
+.popup__content img {
+  display: block;
+  height: 100%;
+  width: 30rem;
+  object-fit: cover;
+}
+.popup__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem;
+  position: relative;
+}
+.popup__name {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.popup__profession {
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  font-size: 1.2rem;
+}
+.popup__close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 4rem;
+  line-height: 0.9;
+  cursor: pointer;
+  transition: 0.2s all;
+  transform: scale(1);
+}
+.popup__close:hover {
+  color: #91E9D3;
+  transform: scale(1.1);
+}
+
 .swiper-container {
   width: 90%;
   height: 100%;
@@ -731,6 +799,7 @@ span.three {
 .team-grid .btn-primary {
   padding: 0.5rem 2rem;
   font-size: 1.4rem;
+  text-decoration: none;
 }
 
 @media (max-width: 48em) {
@@ -883,10 +952,14 @@ span.three {
 }
 .footer-info__list input[type=email]:focus {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px;
+  border-bottom: 3px solid #91E9D3;
 }
 .footer-info__list input[type=email]::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
   font-size: 1.4rem;
+}
+.footer-info__list input[type=email]:focus:invalid {
+  border-bottom: 3px solid #F4A261;
 }
 .footer-info__link {
   font-size: 1.6rem;
@@ -1530,6 +1603,10 @@ span.three {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(../img/portada-medica.svg);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 @media (max-width: 48em) {
@@ -1540,6 +1617,11 @@ span.three {
 .header__img {
   display: block;
   width: 100%;
+}
+@media (max-width: 48em) {
+  .header .btn {
+    background-color: #E2F7F2;
+  }
 }
 
 .info {
@@ -1588,6 +1670,7 @@ span.three {
   .navigation {
     background: #91E9D3;
     padding: 1rem 0;
+    border-bottom: 1px solid #00241b;
   }
 }
 @media (max-width: 62em) {
@@ -1620,6 +1703,7 @@ span.three {
     padding: 0;
     height: 0px;
     overflow: hidden;
+    display: none;
   }
 }
 .navigation__list {
@@ -1748,7 +1832,7 @@ span.three {
 }
 
 .py-lg {
-  padding: 8rem 0;
+  padding: 10rem 0;
 }
 
 .py-md {
@@ -1840,6 +1924,7 @@ span.three {
   .active-nav {
     height: 20rem;
     padding-bottom: 1.5rem;
+    display: block;
   }
 }
 
@@ -1853,6 +1938,16 @@ span.three {
   .offset-0 {
     margin-left: 0;
   }
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.animation-popup {
+  transform: scale(1);
+  opacity: 1;
 }
 
 /**

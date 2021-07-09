@@ -21,8 +21,11 @@
 
         @include sm {
             font-size: 58.5%;
+            // scroll-behavior: auto;
         }
 
+        scroll-behavior: smooth;
+        overflow-y: scroll
     }
 }
 

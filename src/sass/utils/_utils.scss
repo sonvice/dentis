@@ -2,7 +2,7 @@
 @use '../utils/mixins'as*;
 
 .py-lg {
-    padding: 8rem 0;
+    padding: 10rem 0;
 }
 
 .py-md {
@@ -28,6 +28,7 @@
 .flow>*+* {
     margin-top: 2.5rem;
 }
+
 
 .title-box {
     @include sm {
@@ -94,6 +95,7 @@
     @include sm {
         height: 20rem;
         padding-bottom: 1.5rem;
+        display: block;
     }
 }
 
@@ -110,4 +112,14 @@
 
         margin-left: 0;
     }
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.animation-popup {
+    transform: scale(1);
+    opacity: 1;
 }

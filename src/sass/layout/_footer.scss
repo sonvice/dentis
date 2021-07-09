@@ -153,11 +153,16 @@
 
             &:focus {
                 box-shadow: $box-shadow-active;
+                border-bottom: 3px solid $primary-color;
             }
 
             &::-webkit-input-placeholder {
                 color: rgba($white-color, .6);
                 font-size: 1.4rem;
+            }
+
+            &:focus:invalid {
+                border-bottom: 3px solid #F4A261;
             }
         }
     }

@@ -1,8 +1,9 @@
 @use '../utils/variables'as *;
 
-button:focus {
+button:focus,
+.btn:focus {
     outline: max(1px, 0.1em) dashed currentColor;
-    outline-offset: -0.25em;
+    outline-offset: 0.15em;
 }
 
 .btn {

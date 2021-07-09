@@ -4882,10 +4882,7 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true
   }
-});
-console.log(swiper.previousIndex);
-;
-swiper.on('setTransition', function (e) {}); //Intersection Observer
+}); //Intersection Observer
 
 const textSecction = document.querySelectorAll(".observer");
 
@@ -4937,7 +4934,8 @@ textSecction.forEach(element => {
   boxObserver.observe(element); //Recorremos nuestros elementos seleccionados
   //Llamamos a nuestro objeto boxObserver y le decimos que obseve cada uno de los elementos recorridos, ej: boxObserver.observe(elem)
   //ObserverOption es opcional, pero nos da mucho mas control de nuestro objeto observado
-}); //Navegación sticky
+}); //Fin Observer
+//Navegación sticky
 
 const nav = document.querySelector('.navigation');
 const navRow = document.querySelector('.navigation .row');
@@ -4962,5 +4960,46 @@ const lisMenu = document.querySelector('.navigation__nav');
 const boxMenu = document.querySelector('.navigation');
 menuIcon.addEventListener('click', () => {
   lisMenu.classList.toggle('active-nav');
-  boxMenu.classList.toggle('border-bottom');
+}); //Navegation link
+
+const links = document.querySelectorAll('.navigation__link');
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    if (lisMenu.classList.contains('active-nav') && menuIcon.classList.contains('clicked')) {
+      lisMenu.classList.remove('active-nav');
+      menuIcon.classList.remove('clicked');
+    }
+  });
+}); //Team Grid
+
+const gridTeam = document.querySelectorAll(".team-grid__item");
+const gridTeamImg = document.querySelectorAll(".team-grid__item img"); //Popup
+
+let popup = document.querySelector(".popup");
+let popupClose = document.querySelector(".popup__close");
+let popupContent = document.querySelector(".popup__content");
+let popupImg = document.querySelector(".popup__img img");
+let textNamePopup = document.querySelector('.popup__name');
+let textEspecialidadPopup = document.querySelector('.popup__profession');
+gridTeam.forEach(item => {
+  item.addEventListener('click', e => {
+    popup.classList.add("visible");
+    popupContent.classList.add("animation-popup");
+    let attrGridImg = item.children[0].getAttribute('src');
+    let textName = item.children[1].textContent;
+    let textNameEspecialidad = item.children[2].textContent;
+    popupImg.setAttribute('src', attrGridImg);
+    textNamePopup.textContent = textName;
+    textEspecialidadPopup.textContent = textNameEspecialidad; //Prevenir la acción del botón
+
+    if (e.target.classList[0] == 'btn') {
+      e.preventDefault();
+      return;
+    }
+  });
+}); //Close
+
+popupClose.addEventListener("click", () => {
+  popup.classList.remove("visible");
+  popupContent.classList.remove("animation-popup");
 });
