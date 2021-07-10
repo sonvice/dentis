@@ -1,7 +1,7 @@
 //Color
-$primary-color:#91E9D3;
-$secondary-color:#E2F7F2;
-$tertiary-color:#00241b;
+// $primary-color:#91E9D3;
+// $secondary-color:#E2F7F2;
+// $tertiary-color:#00241b;
 
 $color-grey-dark: #777;
 
@@ -11,6 +11,15 @@ $box-shadow:rgba(0, 0, 0, 0.15) 0px 2px 8px;
 $box-shadow-active:rgba(0, 0, 0, 0.2) 0px 2px 8px;
 
 $default-font-size:1.6rem;
+
+:root {
+    --primary-color: #91e9d3;
+    --primary-color-rgab-50: rgba(145, 233, 211, 0.5);
+    --secondary-color: #E2F7F2;
+    --tertiary-color: #00241b;
+
+
+}
 
 /*------------------------------------*\
 * CONTAINER

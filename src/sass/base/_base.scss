@@ -34,6 +34,28 @@ body {
 }
 
 ::selection {
-    background-color: $tertiary-color;
-    color: $secondary-color;
+    background-color: var(--tertiary-color);
+    color: var(--secondary-color);
+}
+
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--tertiary-color) var(--secondary-color);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 1.2rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--tertiary-color);
+    border-radius: 2rem;
+    border: 3px solid var(--secondary-color);
 }

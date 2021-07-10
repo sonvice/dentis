@@ -104,6 +104,9 @@ footer.footer.py-md
                         a.footer-info__link(href="#") Newsletter
                         form(action="").form
                             input(type="email" required placeholder="Make Appointment")
+                            button(type="submit")
+                                svg.icon
+                                    use(xlink:href='img/sprite.svg#arrow-right-fill')
                             .form__check
                                 input(type="radio" name="size" id="large").form__radio-input
                                 label(for="large").form__label

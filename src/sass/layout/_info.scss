@@ -2,12 +2,12 @@
 
 .info {
     color: $white-color;
-    background-color: $tertiary-color;
+    background-color: var(--tertiary-color);
     position: relative;
     z-index: 10;
 
     & .icon {
-        fill: $primary-color;
+        fill: var( --primary-color);
         cursor: pointer;
 
         &:hover {

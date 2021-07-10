@@ -4889,11 +4889,6 @@ const textSecction = document.querySelectorAll(".observer");
 let callback = entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      //VAlido
-      // let title = entry.target.children[0]
-      // let paragraph = entry.target.children[1]
-      // title.classList.add("bt-animation2")
-      // paragraph.classList.add("bt-animation2")
       //Prueba
       let block = Array.from(entry.target.children);
       block[0].classList.add('lr-animation');
@@ -4906,11 +4901,6 @@ let callback = entries => {
     }
 
     if (entry.isIntersecting == false) {
-      //VAlido
-      // let title = entry.target.children[0]
-      // let paragraph = entry.target.children[1]
-      // title.classList.remove("bt-animation2")
-      // paragraph.classList.remove("bt-animation2")
       //Prueba
       let block = Array.from(entry.target.children);
       block[0].classList.remove('lr-animation');

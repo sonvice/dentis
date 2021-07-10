@@ -2,17 +2,17 @@
 
 @keyframes svgColor {
     0% {
-        fill: $tertiary-color;
+        fill: var(--tertiary-color);
     }
 
     100% {
-        fill: $primary-color;
+        fill: var( --primary-color);
     }
 }
 
 @keyframes socialHeader {
     0% {
-        fill: $primary-color;
+        fill: var( --primary-color);
     }
 
     100% {

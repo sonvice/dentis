@@ -21,7 +21,7 @@
 }
 
 .services {
-    background-color: $secondary-color;
+    background-color: var(--secondary-color);
     padding-top: 8rem;
 
     & .btn-primary {
@@ -74,7 +74,7 @@
 }
 
 .testimonial {
-    background-color: $secondary-color;
+    background-color: var(--secondary-color);
 }
 
 .testimonial-box {

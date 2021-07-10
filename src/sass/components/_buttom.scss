@@ -7,8 +7,8 @@ button:focus,
 }
 
 .btn {
-    background-color: $primary-color;
-    color: $tertiary-color;
+    background-color: var( --primary-color);
+    color: var(--tertiary-color);
     cursor: pointer;
     transform: scale(1);
     transition: all .2s;
@@ -42,13 +42,13 @@ button:focus,
 }
 
 .btn-link {
-    color: $primary-color;
+    color: var( --primary-color);
     display: inline-block;
     background: none;
     font-size: 2rem;
 
     &:hover {
-        color: $tertiary-color;
+        color: var(--tertiary-color);
         text-shadow: $box-shadow;
     }
 

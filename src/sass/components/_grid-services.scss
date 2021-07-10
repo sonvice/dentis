@@ -35,7 +35,7 @@
     }
 
     &__item:hover &__icon {
-        fill: $primary-color;
+        fill: var( --primary-color);
         animation: svgColor .5s alternate;
         // animation: name duration timing-function delay iteration-count direction fill-mode;
         // animation-direction: alternate;
@@ -44,7 +44,7 @@
     &__icon {
         width: 9rem;
         height: 9rem;
-        fill: $tertiary-color;
+        fill: var(--tertiary-color);
 
     }
 

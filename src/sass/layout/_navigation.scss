@@ -10,14 +10,14 @@
     transition: .3s all;
 
     @include md {
-        background: $secondary-color;
+        background: var(--secondary-color);
 
     }
 
     @include sm {
-        background: $primary-color;
+        background: var( --primary-color);
         padding: 1rem 0;
-        border-bottom: 1px solid $tertiary-color;
+        border-bottom: 1px solid var(--tertiary-color);
     }
 
     &__box {
@@ -83,7 +83,7 @@
 
     &__link {
         text-decoration: none;
-        color: $tertiary-color;
+        color: var(--tertiary-color);
         font-weight: 600;
         text-transform: capitalize;
     }
