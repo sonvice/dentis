@@ -12,8 +12,10 @@
     padding: 5px 0;
     display: none;
 
+
     @include sm {
         display: block;
+        transform: scale(0.8);
     }
 }
 

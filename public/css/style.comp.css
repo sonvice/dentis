@@ -594,6 +594,7 @@ button:focus,
 @media (max-width: 48em) {
   .menu_icon {
     display: block;
+    transform: scale(0.8);
   }
 }
 
@@ -1760,7 +1761,6 @@ span.three {
 @media (max-width: 48em) {
   .navigation {
     background: var(--primary-color);
-    padding: 1rem 0;
     border-bottom: 1px solid var(--tertiary-color);
   }
 }
@@ -1822,6 +1822,17 @@ span.three {
   color: var(--tertiary-color);
   font-weight: 600;
   text-transform: capitalize;
+}
+@media (max-width: 48em) {
+  .navigation .logo {
+    width: 12rem;
+    height: auto;
+  }
+}
+@media (max-width: 48em) {
+  .navigation .logo img {
+    width: 100%;
+  }
 }
 
 .welcome {

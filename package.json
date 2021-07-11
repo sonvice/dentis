@@ -11,7 +11,7 @@
     "compile:sass": "sass src/sass/index.scss:public/css/style.comp.css",
     "concat:css": "concat -o public/css/style.concat.css public/css/style.comp.css",
     "prefix:css": "postcss public/css/style.comp.css -o public/css/style.prefix.css --use autoprefixer",
-    "compress:css": "sass public/css/style.prefix.css  public/css/style.css --style compressed",
+    "compress:css": "sass public/css/style.prefix.css:public/css/style.css --style compressed",
     "build": "npm-run-all compile:sass prefix:css compress:css",
     "babel-w": "babel-watch ./src/js/script.js -o ./public/js/script.js",
     "babel-compile": "babel ./src/js/*.js --watch -o ./public/js/script.js",

@@ -15,8 +15,7 @@
     }
 
     @include sm {
-        background: var( --primary-color);
-        padding: 1rem 0;
+        background: var(--primary-color);
         border-bottom: 1px solid var(--tertiary-color);
     }
 
@@ -86,5 +85,19 @@
         color: var(--tertiary-color);
         font-weight: 600;
         text-transform: capitalize;
+    }
+
+    & .logo {
+        @include sm{
+
+            width: 12rem;
+            height: auto;
+        }
+        @include sm{
+
+            & img {
+                width: 100%;
+            }
+        }
     }
 }
